@@ -1,5 +1,5 @@
 ---
-title: "Using separate `Transforms` for your training and validation sets in fastai2"
+title: "Using separate Transforms for your training and validation sets in fastai2"
 summary: "Applying a Transform to specific subsets of your Dataset using fastai2's low level APIs"
 layout: post
 branch: master
