@@ -1,5 +1,5 @@
 ---
-title: "Using different Transforms for train and validation sets in fastai2"
+title: "Using separate `Transforms` for your training and validation sets in fastai2"
 summary: "Applying a Transform to specific subsets of your Dataset using fastai2's low level APIs"
 layout: post
 branch: master
@@ -20,9 +20,9 @@ from fastai2.data.all import *
 from fastai2.vision.all import *
 ```
 
-# Applying a `Transform` to specific subsets of your Dataset using `fastai2`'s low level APIs
+## Applying a `Transform` to specific subsets of your Dataset using `fastai2`'s low level APIs
 
-## Preliminaries:
+### Preliminaries:
 
 **What we will be discussing:** We'll learn one very specific thing about the fastai2 library: how to restrict some transforms to work only on specific subsets of your data. For example, you may want a particular image augmentation to only run on your training data and not your validation data.<br>
 **What we are not going to do:** We are not going to look at the source code in this blog and understand how to achieve the above objective. I've done all that homework so you don't have to, and we'll simply be looking into how we can write code to achieve this. Along the way, we'll get some insights on why things work the way they do. I believe that digging through the source code is a great exercise in itself and I encourage you to do the same to get to the core of what we will discuss today<br>
